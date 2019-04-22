@@ -14,13 +14,13 @@ public class DemoApplication {
     }
 
     @Bean
-    ApplicationRunner init(CarRepository repository) {
+    ApplicationRunner init(RestaurantRepository repository) {
         return args -> {
-            Stream.of("Ferrari", "Jaguar", "Porsche", "Lamborghini", "Bugatti",
-                      "AMC Gremlin", "Triumph Stag", "Ford Pinto", "Yugo GV").forEach(name -> {
-                Car car = new Car();
-                car.setName(name);
-                repository.save(car);
+            Stream.of("Panera", "Shake Shack", "Wing Stop", "Burger King", "Taco bell",
+                      "Pizza Hut", "FiveGuys", "Subway", "McDonalds").forEach(name -> {
+                Restaurant restaurant = new Restaurant();
+                restaurant.setName(name);
+                repository.save(restaurant);
             });
             repository.findAll().forEach(System.out::println);
         };

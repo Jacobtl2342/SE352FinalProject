@@ -6,25 +6,25 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import java.util.stream.Collectors;
 
 @RestController
-class CoolCarController {
-    private CarRepository repository;
+class RestaurantController {
+    private RestaurantRepository repository;
 
-    public CoolCarController(CarRepository repository) {
+    public RestaurantController(RestaurantRepository repository) {
         this.repository = repository;
     }
 
-    @GetMapping("/cool-cars")
+    @GetMapping("/restaurant")
     @CrossOrigin(origins = "http://localhost:4200")
-    public Collection<Car> coolCars() {
+    public Collection<Restaurant> coolRestaurant() {
         return repository.findAll().stream()
                 .filter(this::isCool)
                 .collect(Collectors.toList());
     }
 
-    private boolean isCool(Car car) {
-        return !car.getName().equals("AMC Gremlin") &&
-                !car.getName().equals("Triumph Stag") &&
-                !car.getName().equals("Ford Pinto") &&
-                !car.getName().equals("Yugo GV");
+    private boolean isCool(Restaurant restaurant) {
+        return !restaurant.getName().equals("Pizza Hut") &&
+                !restaurant.getName().equals("FiveGuys") &&
+                !restaurant.getName().equals("Subway") &&
+                !restaurant.getName().equals("McDonalds");
     }
 }

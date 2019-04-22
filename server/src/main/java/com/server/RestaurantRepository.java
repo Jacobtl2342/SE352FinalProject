@@ -5,5 +5,5 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource
 @CrossOrigin(origins = "http://localhost:4200")
-interface CarRepository extends JpaRepository<Car, Long> {
+interface RestaurantRepository extends JpaRepository<Restaurant, Long> {
 }
