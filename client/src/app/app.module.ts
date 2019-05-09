@@ -19,6 +19,7 @@ import { LoginComponent } from './login/login.component';
 import { CustomerLandingComponent } from './customer-landing/customer-landing.component';
 import { DriverLandingComponent } from './driver-landing/driver-landing.component';
 import { RestAdminLandingComponent } from './rest-admin-landing/rest-admin-landing.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { RestAdminLandingComponent } from './rest-admin-landing/rest-admin-landi
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
