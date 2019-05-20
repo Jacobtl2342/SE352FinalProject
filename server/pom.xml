@@ -15,7 +15,7 @@
 	<description>SE352Final Project</description>
 
 	<properties>
-		<java.version>9</java.version>
+		<java.version>11</java.version>
 	</properties>
 
 	<dependencies>
@@ -26,6 +26,11 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

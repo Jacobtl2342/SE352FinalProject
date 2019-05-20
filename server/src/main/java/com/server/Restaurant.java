@@ -11,8 +11,10 @@ import javax.persistence.Entity;
 @NoArgsConstructor
 public class Restaurant {
     @Id @GeneratedValue
-    private Long id;
+    private int id;
     private @NonNull String name;
+    private int menu_id;
+    private int admin_id;
     //private @NonNull String address;
     //private @NonNull Int menu;
 

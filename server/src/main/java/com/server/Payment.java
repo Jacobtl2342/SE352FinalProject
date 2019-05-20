@@ -12,6 +12,6 @@ import javax.persistence.Entity;
 public class Payment {
     @Id @GeneratedValue
     private int id;
-    private String status;
+    private String payment_status;
     private String method;
 }

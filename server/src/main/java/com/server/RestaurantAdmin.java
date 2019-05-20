@@ -9,7 +9,7 @@ import javax.persistence.Entity;
 @Entity
 @Data
 @NoArgsConstructor
-public class RestuarantAdmin {
+public class RestaurantAdmin {
     @Id @GeneratedValue
     private int id;
     private int restuarant_id;
