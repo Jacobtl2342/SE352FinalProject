@@ -8,11 +8,6 @@ import { RestaurantListComponent } from './restaurant-list/restaurant-list.compo
 
 //Material Design Module
 import { MaterialModule} from './material.module';
-
-//Firebase connection
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { environment } from '../environments/environment';
 import { NavComponent } from './nav/nav.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
@@ -37,8 +32,6 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
     MaterialModule,
     FormsModule
   ],
