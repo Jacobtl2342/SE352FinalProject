@@ -1,3 +1,103 @@
 <p>
   customer-landing works!
 </p>
+
+
+<p>
+    welcome  
+</p>
+
+<!--
+  1. Gets customer info from login page
+  2. As soon as customer has logged in credientials will save onto the database
+  3. From there you will need some how to retrieve crediential from the database
+      and display them on customer landing page
+  4. Customer Landing page will have "Welcome customer logged in"
+-->
+
+    <h1>My Todo's</h1>
+      <div class = "container">
+      <table class = "table"> 
+        <thead>
+
+            <tr>
+                <th> Order number </th>
+                <th> Restuarant </th>
+                <th> Cost </th>
+                <th> Delivery Status </th>
+            </tr>
+        </thead>
+
+          <tr *ngFor = "let table of table">  
+            <td>{{table.ordernumber}}</td>
+            <td>{{table.restaurant}}</td>
+            <td>{{table.cost}}</td>
+            <td>{{table.deliverystatus}}</td>
+          </tr>
+      </table>
+      </div>
+
+      <div class = "container">
+          <table class = "table"> 
+              <thead>
+                  <tr>
+                      <th> Restaurant Number </th>
+                      <th> Restaurant </th>
+                  </tr>
+              </thead>
+                  <tr *ngFor = "let rtable of rtable">  
+                    <td>{{rtable.restaurantnumber}}</td>
+                    <td>{{rtable.restaurantname}}</td>
+                  </tr>
+          </table>
+        </div>
+
+
+        <mat-grid-list cols="2" rowHeight="3:2">
+
+        <mat-grid-tile>
+
+            <mat-card class="my-card">
+                <mat-card-content>
+                   <form class="my-form" #f="ngForm">
+                      <mat-form-field class="full-width">
+                          <mat-label>Full Name </mat-label>
+                          <input  matInput  placeholder="Full Name" name="Full Name" ngModel>
+                       </mat-form-field>
+                      <mat-form-field class="full-width">
+                         <mat-label>Credit Card Number</mat-label>
+                         <input  matInput  placeholder="Credit Card Number" name="Credit Card Number" ngModel>
+                      </mat-form-field>
+                      <mat-form-field class="full-width">
+                         <mat-label>Street Address</mat-label>
+                         <input  matInput  placeholder="Street Address" name="Street Address" ngModel>
+                      </mat-form-field>
+                      <mat-form-field class="full-width">
+                          <mat-label>City</mat-label>
+                          <input  matInput placeholder="City" name="City" ngModel>
+                       </mat-form-field>
+                       <mat-form-field class="full-width">
+                          <mat-label>State</mat-label>
+                          <input  matInput  placeholder="State" name="State" ngModel>
+                       </mat-form-field>
+                       <mat-form-field class="full-width">
+                          <mat-label>Zip</mat-label>
+                          <input  matInput  placeholder="Zip" name="Zip" ngModel>
+                       </mat-form-field>
+                       <mat-form-field class="full-width">
+                          <mat-label>CSV</mat-label>
+                          <input  matInput  placeholder="CSV" name="CSV" ngModel>
+                       </mat-form-field>
+                    
+                   </form>
+                </mat-card-content>
+                <mat-card-actions align="end">
+                   <button mat-raised-button color="primary">Register</button>
+                </mat-card-actions>
+             </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+
+
+
+

@@ -1,3 +1,44 @@
 <p>
   login works!
 </p>
+
+<mat-grid-list cols="2" rowHeight="3:2">
+
+    <div>
+
+<mat-grid-tile>
+    <mat-card class="my-card">
+        <mat-card-content>
+            <form class="my-form" #f="ngForm">
+               <mat-form-field class="full-width">
+                   <mat-label>Full Name</mat-label>
+                   <input  matInput  placeholder="Full Name" name="name" ngModel>
+                </mat-form-field>
+               <mat-form-field class="full-width">
+                  <mat-label>Email</mat-label>
+                  <input  matInput  placeholder="Email" name="email" ngModel>
+               </mat-form-field>
+              
+               <!-- <mat-form-field class="full-width">
+                 <mat-label>Type</mat-label>
+                 <mat-select name="type" ngModel>
+                   <mat-option *ngFor="let type of types">
+                     {{type}}
+                   </mat-option>
+                 </mat-select>
+               </mat-form-field> -->
+
+            </form>
+         </mat-card-content>
+
+         <mat-card-actions align="end">
+            <button mat-raised-button color="primary">Login</button>
+         </mat-card-actions>
+
+    </mat-card>
+  </mat-grid-tile>
+
+</div>
+</mat-grid-list>
+
+
