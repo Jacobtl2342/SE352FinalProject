@@ -13,5 +13,5 @@ public class RestaurantAdmin {
     @Id @GeneratedValue
     private int id;
     private int restuarant_id;
-    private int order_id;
+    //private int order_id;
 }

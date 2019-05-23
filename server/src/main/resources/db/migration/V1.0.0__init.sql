@@ -10,4 +10,4 @@ CREATE TABLE ORDER_ITEMS(id integer PRIMARY KEY, order_id integer, menu_item_id 
 
 CREATE TABLE PAYMENT(id integer PRIMARY KEY, payment_status text, method text);
 
-CREATE TABLE RESTAURANT_ADMIN(id integer PRIMARY KEY, restaurant_id integer, order_id integer);
+CREATE TABLE RESTAURANT_ADMIN(id integer PRIMARY KEY, restaurant_id integer);
