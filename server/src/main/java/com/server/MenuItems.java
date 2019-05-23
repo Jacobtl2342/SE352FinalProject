@@ -12,7 +12,7 @@ import javax.persistence.Entity;
 public class MenuItems {
     @Id @GeneratedValue
     private int id;
-    private String name;
+    private String item_name;
     private int menu_id_id;
     private float price;
 }
