@@ -12,5 +12,5 @@ import javax.persistence.Entity;
 public class Menu {
     @Id @GeneratedValue
     private int id;
-    private String name;
+    private String menu_name;
 }

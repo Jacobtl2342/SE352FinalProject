@@ -1,47 +1,64 @@
 <img mat-card-image src="assets/images/banner.png" alt="Restaurent">
 <mat-grid-list cols="2" rowHeight="3:2">
+
   <mat-grid-tile>
     <mat-label class="desc">
       Welcome! Order your favorite food<br> and we will deliver it to your door.
     </mat-label>
   </mat-grid-tile>
+
+    
+
   <mat-grid-tile>
     <mat-card class="my-card">
       <mat-card-content>
          <form class="my-form" #f="ngForm">
-            <mat-form-field class="full-width">
-                <mat-label>Full Name</mat-label>
-                <input  matInput  placeholder="Full Name" name="name" ngModel>
+            <!--First Name-->
+            <mat-form-field class="half-width">
+                <mat-label>First Name</mat-label>
+                <input  matInput  placeholder="First Name" name="fname" ngModel>
              </mat-form-field>
+            <!--Last Name-->
+             <mat-form-field class="half-width">
+               <mat-label>Last Name</mat-label>
+               <input  matInput  placeholder="Last Name" name="lname" ngModel>
+            </mat-form-field>
+            <!--Email-->
             <mat-form-field class="full-width">
                <mat-label>Email</mat-label>
                <input  matInput  placeholder="Email" name="email" ngModel>
             </mat-form-field>
+            <!--Password-->
             <mat-form-field class="full-width">
                <mat-label>Password</mat-label>
                <input  matInput  placeholder="Password" name="password" ngModel>
             </mat-form-field>
+            <!--Address-->
             <mat-form-field class="full-width">
-                <mat-label>Confirm Password</mat-label>
-                <input  matInput placeholder="Confirm Password" name="confpassword" ngModel>
-             </mat-form-field>
+               <mat-label>Address</mat-label>
+               <input  matInput  placeholder="Address" name="address" ngModel>
+            </mat-form-field>
+            <!--Phone number-->
              <mat-form-field class="full-width">
                 <mat-label>Phone Number</mat-label>
                 <input  matInput  placeholder="Phone Number" name="phoneNum" ngModel>
              </mat-form-field>
-            <!-- <mat-form-field class="full-width">
-              <mat-label>Type</mat-label>
-              <mat-select name="type" ngModel>
-                <mat-option *ngFor="let type of types">
-                  {{type}}
-                </mat-option>
-              </mat-select>
-            </mat-form-field> -->
+             <!--User Type-->
+             <mat-form-field class="full-width">
+                  <mat-label>Type</mat-label>
+                  <mat-select>
+                    <mat-option *ngFor="let userTypes of types" [value]="userTypes.value">
+                      {{userTypes.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
          </form>
       </mat-card-content>
       <mat-card-actions align="end">
          <button mat-raised-button color="primary">Register</button>
       </mat-card-actions>
+
    </mat-card>
   </mat-grid-tile>
+
 </mat-grid-list>
