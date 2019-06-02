@@ -8,12 +8,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import lombok.Data;
 
 @Data
-@Document (collection = "Reviews")
-public class Reviews implements Serializable {
+@Document (collection = "Logs")
+public class Logs implements Serializable {
 
     private static final long serialVersionUID = 1L;
     private String id;
-    private int Num_star;
+    private String Event;
+
 
     /**
      * @return String return the id
@@ -30,26 +31,24 @@ public class Reviews implements Serializable {
     }
 
     /**
-     * @return int return the Num_star
+     * @return int return the Event
      */
-    public int getNum_star() {
-        return Num_star;
+    public String getEvent() {
+        return Event;
     }
 
     /**
-     * @param Num_star the Num_star to set
+     * @param Event the Event to set
      */
-    public void setNum_star(int Num_star) {
-        this.Num_star = Num_star;
+    public void setNum_star(String Event) {
+        this.Event = Event;
     }
-
+    
     @Override
     public String toString() {
-        return "Reviews{" +
+        return "Logs{" +
                 "id='" + id + '\'' +
-                "Num_star='" + Num_star + 
+                "Event='" + Event + 
                 '}';
     }
 }
-
-

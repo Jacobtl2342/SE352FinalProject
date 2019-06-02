@@ -17,7 +17,7 @@ public class Orders implements Serializable {
     private String Restaurant;
     private String Items;
     private String Status;
-    //private Double TotalPrice;
+    private Double TotalPrice;
 
     /** @return String return the id */
     public String getId() { return id; }
@@ -81,17 +81,19 @@ public class Orders implements Serializable {
         this.Status = Status;
     }
 
-    
-     // @return String return the TotalPrice
-    //public Double getTotalPrice() {
-        //return TotalPrice;
-    //}
+    /**
+     *@return Double return the TotalPrice
+     */
+    public Double getTotalPrice() {
+        return TotalPrice;
+    }
 
-    
-     // @param TotalPrice the TotalPrice to see
-   // public void setTotalPrice(Double TotalPrice) {
-     //   this.TotalPrice = TotalPrice;
-   // }
+    /**
+     * @param TotalPrice the TotalPrice to see
+     */
+    public void setTotalPrice(Double TotalPrice) {
+       this.TotalPrice = TotalPrice;
+    }
 
     @Override
     public String toString() {
@@ -100,7 +102,7 @@ public class Orders implements Serializable {
                 "Restaurant='" + Restaurant + '\'' +
                 ", Items='" + Items + '\'' +
                 ", Status=" + Status + 
-                //", Total Price=" + TotalPrice.toString() + 
+                ", Total Price=" + TotalPrice + 
                 '}';
     }
 

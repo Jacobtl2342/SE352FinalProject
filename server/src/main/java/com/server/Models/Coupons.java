@@ -47,7 +47,7 @@ public class Coupons implements Serializable {
 
     @Override
     public String toString() {
-        return "Orders{" +
+        return "Coupons{" +
                 "id='" + id + '\'' +
                 "Discount='" + Discount + 
                 '}';
