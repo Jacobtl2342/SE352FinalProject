@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { CustomerLandingComponent } from './customer-landing/customer-landing.component';
 import { DriverLandingComponent } from './driver-landing/driver-landing.component';
 import { RestAdminLandingComponent } from './rest-admin-landing/rest-admin-landing.component';
+import { RestaurantItemsComponent } from './restaurant-items/restaurant-items.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'customer', component: CustomerLandingComponent },
   { path: 'driver', component: DriverLandingComponent },
-  { path: 'rest-admin', component: RestAdminLandingComponent }
+  { path: 'rest-admin', component: RestAdminLandingComponent },
+  { path: 'restaurant/:id/items', component: RestaurantItemsComponent },
 ];
 
 @NgModule({

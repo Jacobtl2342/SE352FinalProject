@@ -15,6 +15,7 @@ import { CustomerLandingComponent } from './customer-landing/customer-landing.co
 import { DriverLandingComponent } from './driver-landing/driver-landing.component';
 import { RestAdminLandingComponent } from './rest-admin-landing/rest-admin-landing.component';
 import { FormsModule } from '@angular/forms';
+import { RestaurantItemsComponent } from './restaurant-items/restaurant-items.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     CustomerLandingComponent,
     DriverLandingComponent,
-    RestAdminLandingComponent
+    RestAdminLandingComponent,
+    RestaurantItemsComponent
   ],
   imports: [
     BrowserModule,

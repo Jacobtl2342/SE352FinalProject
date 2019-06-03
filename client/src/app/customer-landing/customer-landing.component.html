@@ -22,7 +22,7 @@
               </tr>
             </thead>
             <tr *ngFor="let rtable of rtable" >
-              <td>{{rtable.restaurantnumber}}</td>
+              <td><a [routerLink]="['/restaurant',rtable.restaurantnumber,'items']" >{{rtable.restaurantnumber}}</a></td>
               <td>{{rtable.restaurantname}}</td>
             </tr>
           </table>
