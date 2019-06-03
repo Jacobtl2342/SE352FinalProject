@@ -1,18 +1,19 @@
-<img mat-card-image src="assets/images/banner.png" alt="Restaurent">
+<img class="full-width" src="assets/images/banner.png" alt="Restaurent">
 <mat-grid-list cols="2" rowHeight="3:2">
 
   <mat-grid-tile>
     <mat-label class="desc">
-      Welcome! Order your favorite food<br> and we will deliver it to your door.
+      <h1>Account Sign up</h1><br> 
+      Please register for an account on this page to access<br>
+      the best food delivery service the industry has to offer!<br>
+      Already have an account? Click<a href="/register"> here</a> to login
     </mat-label>
   </mat-grid-tile>
-
-    
 
   <mat-grid-tile>
     <mat-card class="my-card">
       <mat-card-content>
-         <form class="my-form" #f="ngForm">
+         <form class="register-form" #f="ngForm">
             <!--First Name-->
             <mat-form-field class="half-width">
                 <mat-label>First Name</mat-label>
@@ -57,8 +58,6 @@
       <mat-card-actions align="end">
          <button mat-raised-button color="primary">Register</button>
       </mat-card-actions>
-
    </mat-card>
   </mat-grid-tile>
-
 </mat-grid-list>

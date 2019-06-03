@@ -1,44 +1,35 @@
-<p>
-  login works!
-</p>
+<div class="containter">
+<img style="width: 100%; height: 100%;" src="assets/images/banner.png" alt="Restaurent">
 
-<mat-grid-list cols="2" rowHeight="3:2">
+<mat-label class = "desc">
+  <br>
+  <h1>Welcome!</h1>
+  <p>Please login in to begin using our service! </p>
+  <br>
+</mat-label>
 
-    <div>
+<mat-card class="my-card">
+    <mat-card-content>
+       <form class="register-form" #f="ngForm">
+          <!--Email-->
+          <mat-form-field>
+              <mat-label>Email</mat-label>
+              <input  matInput  placeholder="Email" name="email" ngModel>
+           </mat-form-field>
+           <br>
+          <!--Password-->
+           <mat-form-field>
+             <mat-label>Password</mat-label>
+             <input  matInput  placeholder="password" name="password" ngModel>
+           </mat-form-field>
+       </form>
+    </mat-card-content>
+    <mat-card-actions align="center">
+       <button mat-raised-button color="primary">Login</button>
+    </mat-card-actions>
+   </mat-card>
 
-<mat-grid-tile>
-    <mat-card class="my-card">
-        <mat-card-content>
-            <form class="my-form" #f="ngForm">
-               <mat-form-field class="full-width">
-                   <mat-label>Full Name</mat-label>
-                   <input  matInput  placeholder="Full Name" name="name" ngModel>
-                </mat-form-field>
-               <mat-form-field class="full-width">
-                  <mat-label>Email</mat-label>
-                  <input  matInput  placeholder="Email" name="email" ngModel>
-               </mat-form-field>
-              
-               <!-- <mat-form-field class="full-width">
-                 <mat-label>Type</mat-label>
-                 <mat-select name="type" ngModel>
-                   <mat-option *ngFor="let type of types">
-                     {{type}}
-                   </mat-option>
-                 </mat-select>
-               </mat-form-field> -->
-
-            </form>
-         </mat-card-content>
-
-         <mat-card-actions align="end">
-            <button mat-raised-button color="primary">Login</button>
-         </mat-card-actions>
-
-    </mat-card>
-  </mat-grid-tile>
-
+   <mat-label class="desc">
+      <p>Don't have an account? You can create one<a href="/register"> here</a></p>
+   </mat-label>
 </div>
-</mat-grid-list>
-
-
